@@ -10,7 +10,7 @@
           <%= link_to "HOME", root_path, class: (current_page?(root_path) ? "nav-link under-link active" : "nav-link under-link") %>
         </li>
         <li class="nav-item">
-          <%= link_to "BLOG", articles_path, class: (current_page?(articles_path) || current_page?(article_path) ? "nav-link under-link active" : "nav-link under-link") %>
+          <%= link_to "BLOG", articles_path, class: (current_page?(articles_path) ? "nav-link under-link active" : "nav-link under-link") %>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link under-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

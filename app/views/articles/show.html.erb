@@ -1,10 +1,24 @@
-<h1>Showing article details</h1>
-
-<h3>Title: <%= @article.title %></h3>
-<p><strong>Description: </strong><%= @article.description %></p>
-
-<p>
-  <%= link_to "Edit", edit_article_path(@article) %> 
-  <%= button_to "Delete", article_path(@article), method: :delete, form: { data: { turbo_confirm: "Are you sure?" } } %> 
-  <%= link_to "Back to articles list", articles_path %>
-</p>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-10 text-center mx-auto">
+      <h1 class="display-4 fw-bold lh-1 mb-3"><%= @article.title %></h1>
+    </div>
+  </div>
+  <div class="row align-items center g-lg-5">
+    <div class="col-md-10 mx-auto col-lg-10 article-text">
+      <% if @article.created_at == @article.updated_at %>
+        <p class="timestamp-text text-end">Created <%= time_ago_in_words(@article.created_at) %> ago</p>
+      <% else %>
+        <p class="timestamp-text text-end">Updated <%= time_ago_in_words(@article.updated_at) %> ago</p>
+      <% end %>
+      <p><%= simple_format(@article.description) %></p>
+      <span class="stretch-span"></span>
+    </div>
+  </div>
+  <div class="row align-items center g-lg-5 btns">
+    <div class="text-center mx-auto col-lg-10">
+      <%= link_to "Edit", edit_article_path(@article), class: "edit-btn" %>
+      <%= link_to "Delete", article_path(@article), method: :delete, class: "del-btn", form: { data: { turbo_confirm: "Are you sure?" } } %>
+    </div>
+  </div>
+</div>

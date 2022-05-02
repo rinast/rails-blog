@@ -1,21 +1,13 @@
-<% if @article.errors.any? %>
-  <h2>The following errors prevented the article from being saved:</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
 <%= form_with(model: @article, data: {turbo:false}, local: true) do |f| %>
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="form-group col-12">
+    <%= f.label :title, class: "form-label col-12" %>
+    <%= f.text_field :title, class: "col-12 form-field", placeholder: "Title of the article" %>
+  </div>
+  <div class="form-group col-12">
+    <%= f.label :description, "Text", class: "form-label col-12" %>
+    <%= f.text_area :description, class: "col-12 form-field", placeholder: "Text of the article", rows: 10 %>
+  </div>
+  <div class="form-group col-12">
+    <%= f.submit class: "btn btn-submit" %>
+  </div>
 <% end %>

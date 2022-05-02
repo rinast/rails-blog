@@ -6,11 +6,14 @@
   </div>
   <div class="row align-items center g-lg-5">
     <div class="col-md-10 mx-auto col-lg-10 article-text">
-      <% if @article.created_at == @article.updated_at %>
-        <p class="timestamp-text text-end">Created <%= time_ago_in_words(@article.created_at) %> ago</p>
-      <% else %>
-        <p class="timestamp-text text-end">Updated <%= time_ago_in_words(@article.updated_at) %> ago</p>
-      <% end %>
+      <div class="d-flex justify-content-between">
+        <span class="timestamp-text">By <%= @article.user.username %></span>
+        <% if @article.created_at == @article.updated_at %>
+          <span class="timestamp-text">Created <%= time_ago_in_words(@article.created_at) %> ago</span>
+        <% else %>
+          <span class="timestamp-text">Updated <%= time_ago_in_words(@article.updated_at) %> ago</span>
+        <% end %>
+      </div>
       <p><%= simple_format(@article.description) %></p>
       <span class="stretch-span"></span>
     </div>

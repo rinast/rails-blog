@@ -1,0 +1,93 @@
+@import "bootstrap";
+
+body {
+  background-color: #e7eaee;
+  font-family: 'Souvenir', sans-serif;                                               
+}
+
+/* ----------- NAVBAR ------------ */
+.navbar {
+  font-family: 'Futura Std', sans-serif;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  background: -webkit-linear-gradient(60deg, #f84787, #f7612f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.under-link {
+  color: #CACBD2 !important;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  /*border-bottom: 4px solid #3fa46a;*/
+  padding-bottom: 20px;
+}
+.under-link:hover {
+  color: #F64D72 !important;
+  border-bottom: 2px solid #F64D72;
+  padding: 6px 0; 
+}
+.under-link.active {
+  color: #F64D72 !important;
+}
+@media only screen and (min-width: 769px) {
+  .under-link.active {
+    border-bottom: 2px solid #F64D72;
+    padding: 6px 0; 
+  }
+}
+
+.signup-link {
+  color: #F64D72 !important;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  border: 1px solid #F64D72 !important;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10px 15px 8px !important;
+}
+.signup-link:hover {
+  color: #fff !important;
+  background-color: #F64D72;
+  margin-top: 6px !important;
+  margin-bottom: 24px;
+}
+@media only screen and (max-width: 768px) {
+  .signup-link {
+    color: #fff !important;
+    background-color: #F64D72;
+  }
+}
+
+
+
+
+/* ----------- HOMEPAGE ------------ */
+
+
+
+
+/* ----------- FOOTER ------------ */
+footer {
+  color: #98999d;
+  font-family: 'Futura Std', sans-serif;
+}
+
+.border-top {
+  border-top: 1px solid #CACBD2 !important;
+}

@@ -80,12 +80,29 @@ body {
 /* ----------- HOMEPAGE ------------ */
 
 
+/* ----------- INDEX ------------ */
+.display-6 {
+  font-size: 1.8rem !important;
+}
 
+.timestamp-text {
+  color: #98999d;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.article-index-link {
+  text-decoration: none;
+  color: #212529;
+}
+.article-index-link:hover {
+  color: #212529;
+}
 
 /* ----------- FOOTER ------------ */
 footer {
   color: #98999d;
-  font-family: 'Futura Std', sans-serif;
+  font-family: 'Souvenir', sans-serif;
 }
 
 .border-top {

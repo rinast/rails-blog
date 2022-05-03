@@ -1,7 +1,11 @@
 <div class="container col-xl-10 col-xxl-8 px-4 d-flex flex-direction-column justify-content-center">
   <% if flash.any? %>
-    <div class="col-10 alert alert-success alert-dismissible fade show" role="alert">
       <% flash.each do |name, msg| %>
+        <% if name == "error" %>
+          <div class="col-10 alert alert-danger alert-dismissible fade show" role="alert">
+        <% else %>
+          <div class="col-10 alert alert-success alert-dismissible fade show" role="alert">
+        <% end %>
         <%= msg %>
       <% end %>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

@@ -7,9 +7,6 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <%= link_to "HOME", root_path, class: (current_page?(root_path) ? "nav-link under-link active" : "nav-link under-link") %>
-        </li>
-        <li class="nav-item">
           <%= link_to "BLOG", articles_path, class: (current_page?(articles_path) ? "nav-link under-link active" : "nav-link under-link") %>
         </li>
         <li class="nav-item dropdown">
@@ -28,12 +25,21 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link under-link" href="#">LOG IN</a>
-        </li>
-        <li class="nav-item">
-          <%= link_to "SIGN UP", signup_path, class: (current_page?(signup_path) ? "nav-link signup-link active" : "nav-link signup-link") %>
-        </li>
+        <% if logged_in? %>
+          <li class="nav-item">
+            <%= link_to current_user.username.upcase, user_path(current_user), class: (current_page?(user_path(current_user)) ? "nav-link under-link active" : "nav-link under-link") %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "LOG OUT", logout_path, class: (current_page?(login_path) ? "nav-link under-link active" : "nav-link under-link"), method: :delete %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "LOG IN", login_path, class: (current_page?(login_path) ? "nav-link under-link active" : "nav-link under-link") %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "SIGN UP", signup_path, class: (current_page?(signup_path) ? "nav-link signup-link active" : "nav-link signup-link") %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

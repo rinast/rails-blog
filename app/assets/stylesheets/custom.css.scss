@@ -81,6 +81,20 @@ body {
 }
 
 /* ----------- HOMEPAGE ------------ */
+.signup-home {
+  padding: 8px 12px;
+  border: 1px solid #f64d72;
+  border-radius: 8px;
+  color: #f64d72;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  background-color: #e7eaee;
+}
+.signup-home:hover {
+  background-color: #f64d72;
+  color: #edf0f4;
+}
 
 /* ----------- ARTICLE INDEX ------------ */
 .display-6 {

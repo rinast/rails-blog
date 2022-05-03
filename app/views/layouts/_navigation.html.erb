@@ -24,7 +24,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link under-link" href="#">WRITERS</a>
+          <%= link_to "WRITERS", users_path, class: (current_page?(users_path) ? "nav-link under-link active" : "nav-link under-link") %>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0">

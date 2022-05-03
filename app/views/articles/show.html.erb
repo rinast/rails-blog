@@ -7,7 +7,7 @@
   <div class="row align-items center g-lg-5">
     <div class="col-md-10 mx-auto col-lg-10 article-text">
       <div class="d-flex justify-content-between">
-        <span class="timestamp-text">By <%= @article.user.username %></span>
+        <span class="timestamp-text">By <%= link_to @article.user.username.upcase, user_path(@article.user), class: "timestamp-link" %></span>
         <% if @article.created_at == @article.updated_at %>
           <span class="timestamp-text">Created <%= time_ago_in_words(@article.created_at) %> ago</span>
         <% else %>

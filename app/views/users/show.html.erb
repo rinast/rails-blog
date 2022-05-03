@@ -1,0 +1,20 @@
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-10 text-center mx-auto">
+      <h1 class="display-4 fw-bold lh-1 mb-3"><%= @user.username %>'s blog</h1>
+    </div>
+  </div>
+  <div class="row align-items center g-lg-5">
+    <% if !@user.articles.last.nil? %>
+      <%= render "articles/articlelist", obj: @user.articles %>
+    <% else %>
+      <p class="text-center">This user has not written any articles yet.</p>
+    <% end %>
+  </div>
+  <div class="row align-items center g-lg-5 btns">
+    <div class="text-center mx-auto col-lg-10">
+      <%= link_to "Edit user", edit_user_path(@user), class: "edit-btn" %>
+      <%= button_to "Delete user", user_path(@user), method: :delete, class: "del-btn", form: { data: { turbo_confirm: "Are you sure?" }, class: "d-inline" } %>
+    </div>
+  </div>
+</div>

@@ -1,31 +1,5 @@
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-  <div class="row align-items-center g-lg-5 py-5">
-    <div class="col-lg-7 text-center text-lg-start">
-      <h1 class="display-4 fw-bold lh-1 mb-3"><%= link_to @articles.last.title, article_path(@articles.last), class: "article-index-link" %></h1>
-    </div>
-    <div class="col-md-10 mx-auto col-lg-5">
-      <% if @articles.last.created_at == @articles.last.updated_at %>
-        <p class="timestamp-text">Created <%= time_ago_in_words(@articles.last.created_at) %> ago</p>
-      <% else %>
-        <p class="timestamp-text">Updated <%= time_ago_in_words(@articles.last.updated_at) %> ago</p>
-      <% end %>
-      <p><%= truncate(@articles.last.description, length: 500) %></p>
-    </div>
-  </div>
-
-  <div class="row g-lg-5 py-5">
-    <% @articles[0..-2].reverse_each do |article| %>
-      <div class="col-lg-4 text-center text-lg-start">
-        <% if article.created_at == article.updated_at %>
-          <p class="timestamp-text">Created <%= time_ago_in_words(article.created_at) %> ago</p>
-        <% else %>
-          <p class="timestamp-text">Updated <%= time_ago_in_words(article.updated_at) %> ago</p>
-        <% end %>
-        <h1 class="display-6 fw-bold lh-1 mb-3"><%= link_to article.title, article_path(article), class: "article-index-link" %></h1>
-        <p><%= truncate(article.description, length: 150) %></p>
-      </div>
-    <% end %>
-  </div>
+  <%= render "articlelist", obj: @articles%>
 
   <div class="row align-items center g-lg-5 btns">
     <div class="text-center mx-auto col-lg-10">
@@ -33,3 +7,4 @@
     </div>
   </div>
 </div>
+

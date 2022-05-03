@@ -86,7 +86,7 @@ body {
 /* ----------- HOMEPAGE ------------ */
 
 
-/* ----------- INDEX ------------ */
+/* ----------- ARTICLE INDEX ------------ */
 .display-6 {
   font-size: 1.8rem !important;
 }
@@ -94,6 +94,13 @@ body {
 .timestamp-text {
   color: #98999d;
   font-size: 0.8rem;
+}
+
+.timestamp-link {
+  color: #212529;
+}
+.timestamp-link:hover {
+  color: #212529;
 }
 
 .article-index-link {
@@ -214,6 +221,26 @@ body {
 .del-btn:hover{
   background-color: #F64D72;
   color: #edf0f4;
+}
+
+/* ----------- USER INDEX ------------ */
+.small-btn {
+  padding: 5px 16px;
+  border: 1px solid #7b7d80;
+  border-radius: 8px;
+  color: #212529;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin: 0 0.5rem;
+}
+.small-btn:hover {
+  background-color: #323335;
+  color: #edf0f4;
+}
+
+.users-hr {
+  color: #98999d;
 }
 
 

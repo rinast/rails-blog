@@ -2,12 +2,12 @@
 
 body {
   background-color: #e7eaee;
-  font-family: 'Souvenir', sans-serif;                                               
+  font-family: "Souvenir", sans-serif;
 }
 
 /* ----------- NAVBAR ------------ */
 .navbar {
-  font-family: 'Futura Std', sans-serif;
+  font-family: "Futura Std", sans-serif;
 }
 
 .navbar-brand {
@@ -19,7 +19,7 @@ body {
 }
 
 .under-link {
-  color: #CACBD2 !important;
+  color: #cacbd2 !important;
   font-weight: 600;
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
@@ -32,22 +32,22 @@ body {
   padding-bottom: 20px;
 }
 .under-link:hover {
-  color: #F64D72 !important;
-  border-bottom: 2px solid #F64D72;
-  padding: 6px 0; 
+  color: #f64d72 !important;
+  border-bottom: 2px solid #f64d72;
+  padding: 6px 0;
 }
 .under-link.active {
-  color: #F64D72 !important;
+  color: #f64d72 !important;
 }
 @media only screen and (min-width: 769px) {
   .under-link.active {
-    border-bottom: 2px solid #F64D72;
-    padding: 6px 0; 
+    border-bottom: 2px solid #f64d72;
+    padding: 6px 0;
   }
 }
 
 .signup-link {
-  color: #F64D72 !important;
+  color: #f64d72 !important;
   font-weight: 600;
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
@@ -56,35 +56,31 @@ body {
   margin-top: 10px;
   transition: 0.3s ease;
   text-decoration: none;
-  border: 1px solid #F64D72 !important;
+  border: 1px solid #f64d72 !important;
   border-radius: 8px;
   margin-bottom: 20px;
   padding: 10px 15px 8px !important;
 }
 .signup-link:hover {
   color: #fff !important;
-  background-color: #F64D72;
+  background-color: #f64d72;
   margin-top: 6px !important;
   margin-bottom: 24px;
 }
 .signup-link.active {
   color: #fff !important;
-  background-color: #F64D72;
+  background-color: #f64d72;
   margin-top: 6px !important;
   margin-bottom: 24px;
 }
 @media only screen and (max-width: 768px) {
   .signup-link {
     color: #fff !important;
-    background-color: #F64D72;
+    background-color: #f64d72;
   }
 }
 
-
-
-
 /* ----------- HOMEPAGE ------------ */
-
 
 /* ----------- ARTICLE INDEX ------------ */
 .display-6 {
@@ -136,7 +132,7 @@ body {
   border-radius: 8px;
 }
 .form-field:focus {
-  outline-color: #F64D72;
+  outline-color: #f64d72;
 }
 
 .form-group {
@@ -144,14 +140,14 @@ body {
 }
 
 .btn-submit {
-  border-color: #F64D72;
-  color: #F64D72;
+  border-color: #f64d72;
+  color: #f64d72;
   font-weight: 600;
   border-radius: 8px;
   padding: 0.5rem 1rem;
 }
 .btn-submit:hover {
-  background-color: #F64D72;
+  background-color: #f64d72;
   color: #fff;
 }
 
@@ -166,11 +162,10 @@ body {
   text-decoration: underline solid;
 }
 
-
 /* ----------- ALERTS ------------ */
 .alert-danger {
   background-color: #f0d3d9;
-  color: #b70d31
+  color: #b70d31;
 }
 
 .alert-success {
@@ -209,17 +204,17 @@ body {
 
 .del-btn {
   padding: 8px 12px;
-  border: 1px solid #F64D72;
+  border: 1px solid #f64d72;
   border-radius: 8px;
-  color: #F64D72;
+  color: #f64d72;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s ease;
   margin-left: 1rem;
   background-color: #e7eaee;
 }
-.del-btn:hover{
-  background-color: #F64D72;
+.del-btn:hover {
+  background-color: #f64d72;
   color: #edf0f4;
 }
 
@@ -243,7 +238,6 @@ body {
   color: #98999d;
 }
 
-
 /* ----------- LOGIN/SIGNUP ------------ */
 .user-form {
   margin-top: 5rem;
@@ -253,13 +247,56 @@ body {
   margin-bottom: 1rem;
 }
 
+/* ----------- PAGINATION ------------ */
+.flickr_pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+}
+.flickr_pagination a,
+.flickr_pagination span,
+.flickr_pagination em {
+  padding: 0.2em 0.5em;
+}
+.flickr_pagination .disabled {
+  color: #98999d;
+}
+.flickr_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  color: #f64d72;
+}
+.flickr_pagination a {
+  color: #98999d;
+  text-decoration: none;
+}
+.flickr_pagination a:hover,
+.flickr_pagination a:focus {
+  background: #f64d72;
+  border-radius: 8px;
+  color: #fff;
+}
+.flickr_pagination .page_info {
+  color: #98999d;
+  padding-top: 0.8em;
+}
+.flickr_pagination .previous_page,
+.flickr_pagination .next_page {
+  border-width: 2px;
+}
+.flickr_pagination .previous_page {
+  margin-right: 1em;
+}
+.flickr_pagination .next_page {
+  margin-left: 1em;
+}
 
 /* ----------- FOOTER ------------ */
 footer {
   color: #98999d;
-  font-family: 'Souvenir', sans-serif;
+  font-family: "Souvenir", sans-serif;
 }
 
 .border-top {
-  border-top: 1px solid #CACBD2 !important;
+  border-top: 1px solid #cacbd2 !important;
 }

@@ -1,5 +1,11 @@
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="flickr_pagination mb-5">
+    <%= will_paginate @articles, :container => false %>
+  </div>
   <%= render "articlelist", obj: @articles%>
+   <div class="flickr_pagination">
+    <%= will_paginate @articles, :container => false %>
+  </div>
 
   <div class="row align-items center g-lg-5 btns">
     <div class="text-center mx-auto col-lg-10">

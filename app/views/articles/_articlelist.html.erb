@@ -1,19 +1,19 @@
 <div class="row align-items-center g-lg-5 py-3">
   <div class="col-lg-7 text-center text-lg-start">
-    <h1 class="display-4 fw-bold lh-1 mb-3"><%= link_to obj.last.title, article_path(obj.last), class: "article-index-link" %></h1>
+    <h1 class="display-4 fw-bold lh-1 mb-3"><%= link_to obj.first.title, article_path(obj.first), class: "article-index-link" %></h1>
   </div>
   <div class="col-md-10 mx-auto col-lg-5">
-    <% if obj.last.created_at == obj.last.updated_at %>
+    <% if obj.first.created_at == obj.first.updated_at %>
       <p class="timestamp-text">Created <%= time_ago_in_words(obj.last.created_at) %> ago</p>
     <% else %>
       <p class="timestamp-text">Updated <%= time_ago_in_words(obj.last.updated_at) %> ago</p>
     <% end %>
-    <p><%= truncate(obj.last.description, length: 500) %></p>
+    <p><%= truncate(obj.first.description, length: 500) %></p>
   </div>
 </div>
 
 <div class="row g-lg-5 my-2 py-5">
-  <% obj[0..-2].reverse_each do |x| %>
+  <% obj[1..-1].each do |x| %>
     <div class="col-lg-4 text-center text-lg-start">
       <% if x.created_at == x.updated_at %>
         <p class="timestamp-text">Created <%= time_ago_in_words(x.created_at) %> ago</p>

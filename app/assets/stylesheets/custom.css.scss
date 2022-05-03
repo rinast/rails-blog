@@ -67,6 +67,12 @@ body {
   margin-top: 6px !important;
   margin-bottom: 24px;
 }
+.signup-link.active {
+  color: #fff !important;
+  background-color: #F64D72;
+  margin-top: 6px !important;
+  margin-bottom: 24px;
+}
 @media only screen and (max-width: 768px) {
   .signup-link {
     color: #fff !important;
@@ -210,6 +216,15 @@ body {
   color: #edf0f4;
 }
 
+
+/* ----------- LOGIN/SIGNUP ------------ */
+.user-form {
+  margin-top: 5rem;
+}
+
+.user-form .form-field {
+  margin-bottom: 1rem;
+}
 
 
 /* ----------- FOOTER ------------ */

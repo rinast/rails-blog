@@ -32,7 +32,7 @@
           <a class="nav-link under-link" href="#">LOG IN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link signup-link" href="#">SIGN UP</a>
+          <%= link_to "SIGN UP", signup_path, class: (current_page?(signup_path) ? "nav-link signup-link active" : "nav-link signup-link") %>
         </li>
       </ul>
     </div>

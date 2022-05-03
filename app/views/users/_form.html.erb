@@ -1,0 +1,10 @@
+<%= form_with(model: @user, data: {turbo:false}, local: true) do |f| %>
+  <div class="form-group col-12 user-form">
+    <%= f.text_field :username, class: "col-12 form-field", placeholder: "Username" %>
+    <%= f.email_field :email, class: "col-12 form-field", placeholder: "Email" %>
+    <%= f.password_field :password, class: "col-12 form-field", placeholder: "Password", rows: 10 %>
+  </div>
+  <div class="form-group col-12">
+    <%= f.submit "Sign Up", class: "btn btn-submit" %>
+  </div>
+<% end %>

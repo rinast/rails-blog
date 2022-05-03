@@ -15,7 +15,9 @@
         <div class="row align-items center g-lg-5">
           <div class="text-center mx-auto col-lg-10">
             <%= link_to "View blog", user, class: "small-btn" %>
-            <%= link_to "Edit profile", edit_user_path(user), class: "small-btn" %>
+            <% if logged_in? && user == current_user %>
+              <%= link_to "Edit profile", edit_user_path(user), class: "small-btn" %>
+            <% end %>
           </div>
         </div>
         <% if user != @users.last %>

@@ -28,7 +28,6 @@ body {
   margin-top: 10px;
   transition: 0.3s ease;
   text-decoration: none;
-  /*border-bottom: 4px solid #3fa46a;*/
   padding-bottom: 20px;
 }
 .under-link:hover {
@@ -44,6 +43,22 @@ body {
     border-bottom: 2px solid #f64d72;
     padding: 6px 0;
   }
+}
+
+.drop-link {
+  color: #cacbd2 !important;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.drop-link:hover {
+  color: #f64d72 !important;
 }
 
 .signup-link {
@@ -63,7 +78,7 @@ body {
 }
 .signup-link:hover {
   color: #fff !important;
-  background-color: #f64d72;
+  ckground-color: #f64d72;
   margin-top: 6px !important;
   margin-bottom: 24px;
 }

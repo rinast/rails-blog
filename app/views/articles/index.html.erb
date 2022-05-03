@@ -7,10 +7,13 @@
     <%= will_paginate @articles, :container => false %>
   </div>
 
-  <div class="row align-items center g-lg-5 btns">
-    <div class="text-center mx-auto col-lg-10">
-      <%= link_to "Submit new article", new_article_path, class: "new-btn" %>
+  <% if logged_in? %>
+    <div class="row align-items center g-lg-5 btns">
+      <div class="text-center mx-auto col-lg-10">
+        <%= link_to "Submit new article", new_article_path, class: "new-btn" %>
+      </div>
     </div>
-  </div>
+  <% end %>
+  
 </div>
 

@@ -4,7 +4,12 @@
 //= require bootstrap
 //= require popper
 
+
 import "@hotwired/turbo-rails"
 import "controllers"
 import "popper"
 import "bootstrap"
+
+<script>data-turbolinks-eval=false</script>
+
+

@@ -61,6 +61,10 @@ body {
   color: #f64d72 !important;
 }
 
+.dropdown-menu {
+  border-radius: 8px;
+}
+
 .signup-link {
   color: #f64d72 !important;
   font-weight: 600;
@@ -78,7 +82,7 @@ body {
 }
 .signup-link:hover {
   color: #fff !important;
-  ckground-color: #f64d72;
+  background-color: #f64d72;
   margin-top: 6px !important;
   margin-bottom: 24px;
 }

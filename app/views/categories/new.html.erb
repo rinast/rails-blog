@@ -1,0 +1,23 @@
+<%= render "shared/errors", obj: @category %>
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-1">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-6 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 mb-3">Create a new category</h1>
+      <p class="col-lg-10 fs-5">Need a new category for your article? Create it here.</p>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-6">
+      
+      <%= form_with(model: @category, data: {turbo:false}, local: true) do |f| %>
+        <div class="form-group col-12">
+          <%= f.label :name, "Category name", class: "form-label col-12" %>
+          <%= f.text_field :name, class: "col-12 form-field", placeholder: "Name of the category" %>
+        </div>
+        <div class="form-group col-12">
+          <%= f.submit class: "btn btn-submit" %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

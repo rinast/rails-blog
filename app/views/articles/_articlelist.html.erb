@@ -4,9 +4,9 @@
   </div>
   <div class="col-md-10 mx-auto col-lg-5">
     <% if obj.first.created_at == obj.first.updated_at %>
-      <p class="timestamp-text">Created <%= time_ago_in_words(obj.last.created_at) %> ago</p>
+      <p class="timestamp-text">Created <%= time_ago_in_words(obj.first.created_at) %> ago</p>
     <% else %>
-      <p class="timestamp-text">Updated <%= time_ago_in_words(obj.last.updated_at) %> ago</p>
+      <p class="timestamp-text">Updated <%= time_ago_in_words(obj.first.updated_at) %> ago</p>
     <% end %>
     <% if obj.first.categories.any? %>
         <p>

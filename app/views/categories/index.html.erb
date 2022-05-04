@@ -11,6 +11,7 @@
     <% @categories.each do |category| %>
       <div class="col-lg-12 text-lg-start">
         <h1 class="display-6 text-center fw-bold lh-1 mb-3"><%= link_to category.name, category, class: "article-index-link" %></h1>
+        <p class="text-center"><%= pluralize(category.articles.count, "articles") %></p>
         <% if category != @categories.last %>
           <hr class="users-hr mt-5">
         <% end %>

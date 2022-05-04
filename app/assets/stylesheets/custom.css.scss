@@ -215,6 +215,21 @@ body {
   text-decoration: underline solid;
 }
 
+.cat-select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #828386;
+  width: 100%;
+}
+
+.cat-text {
+  color: #212529;
+
+}
+.cat-text:hover {
+  color: #212529;
+}
+
 /* ----------- ALERTS ------------ */
 .alert-danger {
   background-color: #f0d3d9;

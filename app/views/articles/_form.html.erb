@@ -8,6 +8,10 @@
     <%= f.text_area :description, class: "col-12 form-field", placeholder: "Text of the article", rows: 10 %>
   </div>
   <div class="form-group col-12">
+    <%= f.label :category, "Category", class: "form-label col-12" %>
+    <%= f.collection_select(:category_ids, Category.all, :id, :name, { prompt: "Select matching categories from the list" }, { multiple: true, class: "custom-select cat-select" }) %>
+  </div>
+  <div class="form-group col-12">
     <%= f.submit class: "btn btn-submit" %>
   </div>
 <% end %>

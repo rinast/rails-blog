@@ -16,6 +16,15 @@
       </div>
       <p><%= simple_format(@article.description) %></p>
       <span class="stretch-span"></span>
+      <div class="d-flex justify-content-end mt-2">
+        <% if @article.categories.any? %>
+        <p>
+          <% @article.categories.each do |cat| %>
+            <span class="timestamp-text ml-1"><%= link_to cat.name.upcase, category_path(cat), class: "cat-text" %> </span>
+          <% end %>
+        </p>
+      <% end %>
+      </div>
     </div>
   </div>
 

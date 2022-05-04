@@ -8,6 +8,13 @@
     <% else %>
       <p class="timestamp-text">Updated <%= time_ago_in_words(obj.last.updated_at) %> ago</p>
     <% end %>
+    <% if obj.first.categories.any? %>
+        <p>
+          <% obj.first.categories.each do |cat| %>
+            <span class="timestamp-text ml-1"><%= link_to cat.name.upcase, category_path(cat), class: "cat-text" %> </span>
+          <% end %>
+        </p>
+      <% end %>
     <p><%= truncate(obj.first.description, length: 500) %></p>
   </div>
 </div>
@@ -19,6 +26,13 @@
         <p class="timestamp-text">Created <%= time_ago_in_words(x.created_at) %> ago</p>
       <% else %>
         <p class="timestamp-text">Updated <%= time_ago_in_words(x.updated_at) %> ago</p>
+      <% end %>
+      <% if x.categories.any? %>
+        <p>
+          <% x.categories.each do |cat| %>
+            <span class="timestamp-text ml-1"><%= link_to cat.name.upcase, category_path(cat), class: "cat-text" %> </span>
+          <% end %>
+        </p>
       <% end %>
       <h1 class="display-6 fw-bold lh-1 mb-3"><%= link_to x.title, article_path(x), class: "article-index-link" %></h1>
       <p><%= truncate(x.description, length: 150) %></p>

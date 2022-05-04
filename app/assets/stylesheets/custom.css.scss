@@ -61,6 +61,26 @@ body {
   color: #f64d72 !important;
 }
 
+.drop-btn {
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  padding-bottom: 10px;
+  color: #f64d72 !important;
+  text-underline-offset: 2px;
+}
+.drop-btn:hover {
+  color: #f64d72 !important;
+  text-decoration: underline;
+}
+
 .dropdown-menu {
   border-radius: 8px;
 }

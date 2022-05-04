@@ -32,13 +32,14 @@
               <% else %>
                 <a class="nav-link under-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <% end %>
-              <%= current_user.username.upcase %>
+              <%= "(admin) " if current_user.admin? %><%= current_user.username.upcase %>
               </span>
             </a>
             <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="navbarDropdown">
               <li><%= link_to "VIEW PROFILE", user_path(current_user), class: "nav-link drop-link" %></li>
               <li><%= link_to "EDIT PROFILE", edit_user_path(current_user), class: "nav-link drop-link" %></li>
               <li><%= link_to "NEW ARTICLE", new_article_path, class: "nav-link drop-link" %></li>
+              <li><%= button_to "DELETE PROFILE", user_path(current_user), class: "drop-btn", form: { data: { turbo_confirm: "Are you sure?" }, class: "d-inline" }, method: :delete %></li>
             </ul>
           </li>
           <li class="nav-item">
